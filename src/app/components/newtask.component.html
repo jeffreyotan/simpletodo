@@ -1,0 +1,18 @@
+<div>
+    <h2 class="orange-heading">New Task</h2>
+    <form [formGroup]="newTaskForm" (ngSubmit)="processForm()">
+        <p>
+            Description: <input type="text" formControlName="description" size="50">
+        </p>
+        <p>
+            Priority:
+            <input type="radio" value="high" formControlName="priority"> High
+            <input type="radio" value="medium" formControlName="priority"> Medium
+            <input type="radio" value="low" formControlName="priority"> Low
+        </p>
+        <p>
+            Due: <input type="date" formControlName="duedate">
+        </p>
+        <button type="submit" [disabled]="newTaskForm.invalid">Add</button>
+    </form>
+</div>

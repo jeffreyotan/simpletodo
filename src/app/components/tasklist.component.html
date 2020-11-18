@@ -1,0 +1,12 @@
+<div class="with-borders">
+    <h2 class="orange-heading">Task List</h2>
+    <form [formGroup]="taskList">
+        <div formArrayName="tasks">
+            <div *ngFor="let task of taskArray.controls" [formGroup]='task' class="with-borders">
+                <input type="text" name="description" formControlName="description" size="50"><br>
+                <input type="text" name="priority" formControlName="priority">
+                <input type="date" name="duedate" formControlName="duedate">
+            </div>
+        </div>
+    </form>
+</div>

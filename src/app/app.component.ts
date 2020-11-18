@@ -7,4 +7,10 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'simpletodo';
+  newTask = {};
+
+  onNewTask($event): void {
+    // console.info('Received: ', $event);
+    this.newTask = $event;
+  }
 }
